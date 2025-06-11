@@ -1,0 +1,206 @@
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Activity,1,13,21]; ]
+using Toybox.Activity;
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Lang,2,13,17]; ]
+using Toybox.Lang;
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Sensor,4,13,19]; ]
+using Toybox.Sensor;
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Timer,5,13,18]; ]
+using Toybox.Timer;
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 7; @symbol_classdef = [SimpleSpeedDataFieldView,7,6,30]; @symbol_extends<0> = [WatchUi,7,39,46]; @symbol_extends<1> = [SimpleDataField,7,47,62]; ]
+class SimpleSpeedDataFieldView extends WatchUi.SimpleDataField {
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
+    function initialize() as Void {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_9_26_12_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 10 8 ]
+        symbol [ SimpleDataField %tmp.2 10 8 23 ];
+        %tmp.2 = getv ? :SimpleDataField;
+        symbol [ initialize %tmp.3 10 24 34 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 11 8 ]
+        %tmp.4 = "Speed";
+        symbol [ label ? 11 8 13 ];
+        putv self :label %tmp.4;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_9_26_12_4_stop:
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 14; @symbol_functiondef = [compute,14,13,20]; @symbol_param<0> = [info,14,21,25]; @symbol_param<0>_type<0> = [Activity,14,29,37]; @symbol_param<0>_type<1> = [Info,14,38,42]; ]
+    function compute(info as Activity.Info) {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_14_44_22_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 16 8 ]
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_8_20_8_if_stmt:
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_12_16_59_begin:
+        %tmp.1 = lgetv %info;
+        symbol [ info %tmp.1 16 12 16 ];
+        %tmp.3 = const :currentSpeed;
+        symbol [ currentSpeed %tmp.3 16 22 34 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_8_20_8_if_end;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_38_16_59_true:
+        %tmp.5 = lgetv %info;
+        symbol [ info %tmp.5 16 38 42 ];
+        %tmp.6 = as %tmp.5 { (interface { var currentSpeed; }) };
+        symbol [ currentSpeed %tmp.7 16 43 55 ];
+        %tmp.7 = getv %tmp.6 :currentSpeed;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_38_16_59_end:
+        %tmp.10 = phi [%tmp.4 @C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_12_16_59_begin] [%tmp.9 @C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_38_16_59_true] [%tmp.10 @C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_38_16_59_end];
+        bf %tmp.10 @C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_8_20_8_if_end;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_8_20_8_if_true:
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_65_20_8_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 17 12 ]
+        [ "C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_65_20_8_start" "C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_65_20_8_stop" ]
+        %speed.1 = local;
+        symbol [ speed %speed.1 17 16 21 ];
+        %tmp.11 = lgetv %info;
+        symbol [ info %tmp.11 17 24 28 ];
+        %tmp.12 = as %tmp.11 { (interface { var currentSpeed; }) };
+        symbol [ currentSpeed %tmp.13 17 29 41 ];
+        %tmp.13 = getv %tmp.12 :currentSpeed;
+        lputv %speed.1 %tmp.13;
+        symbol [ speed %speed.1 17 16 21 ];
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 18 12 ]
+        [ "C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_65_20_8_start" "C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_65_20_8_stop" ]
+        %speedKmh.2 = local;
+        symbol [ speedKmh %speedKmh.2 18 16 24 ];
+        %tmp.14 = lgetv %speed.1;
+        symbol [ speed %tmp.14 18 27 32 ];
+        %tmp.15 = 3.6;
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        lputv %speedKmh.2 %tmp.16;
+        symbol [ speedKmh %speedKmh.2 18 16 24 ];
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 19 12 ]
+        %tmp.17 = lgetv %speedKmh.2;
+        symbol [ speedKmh %tmp.17 19 19 27 ];
+        ret %tmp.17;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_65_20_8_stop:
+        goto @C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_8_20_8_if_end;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_16_8_20_8_if_end:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 21 8 ]
+        %tmp.18 = null;
+        ret %tmp.18;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_14_44_22_4_stop:
+    }
+}
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 26; @symbol_classdef = [SimpleSpeedSensorDelegate,26,6,31]; @symbol_extends<0> = [Sensor,26,40,46]; @symbol_extends<1> = [SensorDelegate,26,47,61]; ]
+class SimpleSpeedSensorDelegate extends Sensor.SensorDelegate {
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 26; ]
+    <init> {
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 26; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 27; @position = 16; @symbol_vardef = [mScanTimer,27,16,26]; @symbol_type<0> = [Timer,27,30,35]; @symbol_type<1> = [Timer,27,36,41]; ]
+    private
+    var mScanTimer as Timer.Timer or Null;
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 29; @symbol_functiondef = [initialize,29,13,23]; ]
+    function initialize() as Void {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_29_26_31_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 30 8 ]
+        symbol [ SensorDelegate %tmp.2 30 8 22 ];
+        %tmp.2 = getv ? :SensorDelegate;
+        symbol [ initialize %tmp.3 30 23 33 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_29_26_31_4_stop:
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 34; @symbol_functiondef = [sensorPairingRequired,34,13,34]; @symbol_return<0> = [Lang,34,40,44]; @symbol_return<1> = [Boolean,34,45,52]; ]
+    function sensorPairingRequired() as Lang.Boolean {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_34_53_36_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 35 8 ]
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_34_53_36_4_stop:
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 39; @symbol_functiondef = [onScan,39,13,19]; ]
+    function onScan() {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_39_22_44_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 41 8 ]
+        symbol [ Timer %tmp.3 41 25 30 ];
+        %tmp.3 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.4 41 31 36 ];
+        %tmp.4 = getv function ? %tmp.3 :Timer;
+        %tmp.1 = newc %tmp.4 ();
+        symbol [ mScanTimer ? 41 8 18 ];
+        putv self :mScanTimer %tmp.1;
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 42 8 ]
+        symbol [ mScanTimer %tmp.6 42 8 18 ];
+        %tmp.6 = getv ? :mScanTimer;
+        symbol [ start %tmp.7 42 19 24 ];
+        %tmp.7 = getv function %tmp.6 :start;
+        %tmp.8 = self;
+        symbol [ method %tmp.9 42 25 31 ];
+        %tmp.9 = getv function %tmp.8 :method;
+        %tmp.11 = const :onScanTimeout;
+        symbol [ onScanTimeout %tmp.11 42 33 46 const ];
+        %tmp.12 = invoke %tmp.8 %tmp.9(%tmp.11);
+        %tmp.13 = 5000;
+        %tmp.14 = false;
+        invoke %tmp.6 %tmp.7(%tmp.12, %tmp.13, %tmp.14);
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 43 8 ]
+        %tmp.15 = true;
+        ret %tmp.15;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_39_22_44_4_stop:
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 47; @symbol_functiondef = [onScanTimeout,47,13,26]; ]
+    function onScanTimeout() as Void {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_47_37_51_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 49 8 ]
+        symbol [ Sensor %tmp.1 49 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ notifyScanComplete %tmp.2 49 15 33 ];
+        %tmp.2 = getv function %tmp.1 :notifyScanComplete;
+        invoke %tmp.1 %tmp.2();
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 50 8 ]
+        %tmp.3 = null;
+        symbol [ mScanTimer ? 50 8 18 ];
+        putv self :mScanTimer %tmp.3;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_47_37_51_4_stop:
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 54; @symbol_functiondef = [onPair,54,13,19]; @symbol_param<0> = [sensorInfo,54,20,30]; @symbol_param<0>_type<0> = [Sensor,54,34,40]; @symbol_param<0>_type<1> = [SensorInfo,54,41,51]; ]
+    function onPair(sensorInfo as Sensor.SensorInfo) {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_54_53_58_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 56 8 ]
+        symbol [ Sensor %tmp.1 56 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ notifyPairComplete %tmp.2 56 15 33 ];
+        %tmp.2 = getv function %tmp.1 :notifyPairComplete;
+        %tmp.3 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.3 56 34 44 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 57 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_54_53_58_4_stop:
+    }
+    [ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 61; @symbol_functiondef = [onUnpair,61,13,21]; @symbol_param<0> = [sensorInfo,61,22,32]; @symbol_param<0>_type<0> = [Sensor,61,36,42]; @symbol_param<0>_type<1> = [SensorInfo,61,43,53]; ]
+    function onUnpair(sensorInfo as Sensor.SensorInfo) {
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_61_55_65_4_start:
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 63 8 ]
+        symbol [ Sensor %tmp.1 63 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ notifyUnpairComplete %tmp.2 63 15 35 ];
+        %tmp.2 = getv function %tmp.1 :notifyUnpairComplete;
+        %tmp.3 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.3 63 36 46 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc" 64 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+C_Users_kuhnmichael_code_SimpleSpeedDataField_source_SimpleSpeedDataFieldView_mc_61_55_65_4_stop:
+    }
+}
+[ @file = "C:\Users\kuhnmichael\code\SimpleSpeedDataField\source\SimpleSpeedDataFieldView.mc"; @line = 1; ]
+<init> {
+}
